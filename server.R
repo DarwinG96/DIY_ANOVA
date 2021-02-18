@@ -197,12 +197,9 @@ shinyServer(function(input, output, session) {
     req(inData(), response())
     
     metaExpr({
-      ks.test(
-        ..(response_vector()), 
-        pnorm, 
-        mean(..(response_vector()), na.rm = T), 
-        sd(..(response_vector()), na.rm = T)
-      )
+      shapiro.test(
+    ..(response_vector())
+  )
     })
   })
   
