@@ -304,7 +304,7 @@ shinyServer(function(input, output, session) {
     
     metaExpr({
             shapiro.test(
- .. (response_vector())
+ .. (response_transf())
   )
     })
   })
