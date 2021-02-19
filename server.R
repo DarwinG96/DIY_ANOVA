@@ -303,12 +303,9 @@ shinyServer(function(input, output, session) {
     req(response_transf())
     
     metaExpr({
-      ks.test(
-        ..(response_transf()),
-        pnorm,
-        mean(..(response_transf()), na.rm = T),
-        sd(..(response_transf()), na.rm = T)
-      )
+            shapiro.test(
+ .. (response_vector())
+  )
     })
   })
   
